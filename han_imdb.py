@@ -83,11 +83,6 @@ y_train = labels[:-nb_validation_samples]
 x_val = data[-nb_validation_samples:]
 y_val = labels[-nb_validation_samples:]
 
-with open('validation_set_imdb.pkl', 'wb') as f:
-    pickle.dump([x_val, y_val], f)
-
-exit(0)
-
 print('Number of positive and negative reviews in training and validation set')
 print(y_train.sum(axis=0))
 print(y_val.sum(axis=0))
